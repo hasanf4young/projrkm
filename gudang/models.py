@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Barang(models.Model):
-    tanggal = models.DateField() # tanggal angsuran
+    tanggal = models.DateField()
     nama = models.CharField(max_length=5)
     harga = models.DecimalField(max_digits=12, decimal_places=2)
     cu = models.ForeignKey(User,related_name='+', on_delete=models.CASCADE,editable=False, null=True, blank=True)
